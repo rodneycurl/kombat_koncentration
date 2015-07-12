@@ -1,5 +1,11 @@
 # project_1_preston
-Concentration:
+Concentration:  
+Sometimes just called "Memory", it's a card game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn. If you get all the matching cards, you've won!  
+Bonus:  
+- Let the user choose from different 'decks'  
+- Add timers / scoring based on timers  
+- Think of some fun way to modify the rules of  
+
 1. Upon opening the webpage a user should see a gameboard with 20 preloaded cards that all look the same and the cards should be laid out proportionately on the screen  
 2. On the back of the cards there should be an image that links a specific card to another card on the gameboard  
 3. As user should be able to click on a specific card and have that card turn over to reveal what is on the back of the card  
