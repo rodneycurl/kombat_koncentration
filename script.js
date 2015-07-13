@@ -1,5 +1,5 @@
-$(".one").on("click", function(event){
-  event.preventDefault();
-  document.getElementById('front');
-  document.getElementById("back");
+$(document).ready(function(){
+    $('.flip-container').on("click",function(){
+      $(this).toggleClass('flip');
+    });
 });
