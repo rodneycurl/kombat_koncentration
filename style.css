@@ -14,21 +14,29 @@ header{
 body{
   background: url(images/MK_background_reptile.jpg);
 }
-.card{
-  height: 200px;
-  width: 100px;
-}
 .flip-container{
-  height: 200px;
-  width: 100px;
-  margin: 20px;
+  height: 150px;
+  width: 80px;
+  margin: 15px;
   float:left;
   position:relative;
   background: #fff;
   border-radius: 10px;
   border: 6px solid orange;
 }
+.frontCard{
+  height: 150px;
+  width: 80px;
+  background: white;
+}
+.backCard{
+  height: 150px;
+  width: 80px;
+  background: white;  
+}
+
 .controls {
+  clear: left;
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center;
@@ -68,7 +76,7 @@ transition: all 0.5s ease-out;
 backface-visibility: hidden;
 transform: rotateX(180deg);
 }
-.flip-container .back {
+/*.flip-container .back {
 z-index: 0;
 transform-style: preserve-3d;
 position: absolute;
@@ -76,8 +84,8 @@ transition: all 0.5s ease-out;
 -webkit-transition: all 0.5s ease-out;
 backface-visibility: hidden;
 transform: rotateX(-180deg);
-}
-.flip-container.flip .back {
+}*/
+/*.flip-container.flip .back {
 z-index: 2;
 transform-style: preserve-3d;
 position: absolute;
@@ -85,4 +93,4 @@ transition: all 0.5s ease-out;
 -webkit-transition: all 0.5s ease-out;
 backface-visibility: hidden;
 transform: rotateX(0deg);
-}
+}*/
