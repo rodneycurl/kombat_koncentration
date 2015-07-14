@@ -1,5 +1,5 @@
 $(document).ready(function(){
- var checkingArray = [];
+ checkingArray = [];
     var numFlipped = 0;
     $('div div').on("click",function(){
       if (!$(this).hasClass('flip')){
@@ -8,36 +8,45 @@ $(document).ready(function(){
         CardValue = $(this).val();
         console.log(CardValue);
         pickedCard.attr("src", imageLibrary[CardValue])
-        checkingArray.push(CardValue)
+        checkingArray.push($(this))
         console.log(checkingArray);
         numFlipped++;
-        console.log(numFlipped)
+        card1 = checkingArray[0];
+        card2 = checkingArray[1];
       }
       else {
         console.log("already picked!")
       }
       cardMatching();
+      cardNotMatching();
     })
 
-
-function cardMatching(){
-  if (numFlipped === 2 && checkingArray[0] === checkingArray[1]) {
-    console.log("match")
-  }
-  else{
-    console.log("not yet")
+function cardNotMatching(){
+  if (numFlipped === 2){
+    if(card1.val() != card2.val()) {
+      setTimeout (
+      function(){
+      numFlipped = 0;
+      $("div div").removeClass("flip");
+      console.log(card1)
+      card1.children().eq(0).attr("src", "images/Mortal_Kombat_Logo.png");
+      card2.children().eq(0).attr("src", "images/Mortal_Kombat_Logo.png");
+      checkingArray = [];
+    },
+    750);
+    }
   }
 }
-//   if (CardValue === $("div.flip-container.flip").val())
-//   console.log("match made")
-//   // pickedCard.hide();
-//   // pickedCard1.hide();
-// }
-// // else {
-// //   pickedCard.removeClass('flip');
-// //   pickedCard1.removeClass('flip');
-// // }
-// // };
+function cardMatching(){
+  if (numFlipped === 2){
+    if(card1.val() === card2.val()){
+    console.log("match")
+    numFlipped = 0;
+    checkingArray = [];
+    }
+  }
+}
+
     var cardDeck = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12];
 
     function shuffle(cardDeck){
@@ -64,11 +73,16 @@ function cardMatching(){
     }
 
     $("#reset").on("click", function (){
-      $('.flip-container').removeClass("flip");
+      $('div div').removeClass("flip");
+      $("img.frontCard").attr("src", "images/Mortal_Kombat_Logo.png");
+      shuffle(cardDeck);
+      for (i = 0; i < cardDeck.length; i++) {
+        $('div div').eq(i).val(cardDeck[i]);
+      }
     });
 
     $("#background").on("click", function(){
-      $("body").css("background", "url(images/MK_background_coliseum.jpg)");
+      $("body").toggleClass("newBackground");
     });
 
 });

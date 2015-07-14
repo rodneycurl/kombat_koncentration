@@ -14,6 +14,9 @@ header{
 body{
   background: url(images/MK_background_reptile.jpg);
 }
+body.newBackground{
+  background: url(images/MK_background_coliseum.jpg);
+}
 .flip-container{
   height: 150px;
   width: 80px;
@@ -25,11 +28,6 @@ body{
   border: 6px solid orange;
 }
 .frontCard{
-  height: 150px;
-  width: 80px;
-  background: white;
-}
-.backCard{
   height: 150px;
   width: 80px;
   background: white;
@@ -58,39 +56,3 @@ body{
 button:hover{
     background: #FF4136;
 }
-/*div.front.flip {
-transform-style: preserve-3d;
-position: absolute;
-transition: all 0.5s ease-out;
--webkit-transition: all 0.5s ease-out;
-backface-visibility: hidden;
-transform: rotateX(0deg);
-z-index: 1;
-}*/
-/*div.front.flip {
-z-index: 1;
-transform-style: preserve-3d;
-position: absolute;
-transition: all 0.5s ease-out;
--webkit-transition: all 0.5s ease-out;
-backface-visibility: hidden;
-transform: rotateX(180deg);
-}*/
-/*.flip-container .back {
-z-index: 0;
-transform-style: preserve-3d;
-position: absolute;
-transition: all 0.5s ease-out;
--webkit-transition: all 0.5s ease-out;
-backface-visibility: hidden;
-transform: rotateX(-180deg);
-}*/
-/*.flip-container.flip .back {
-z-index: 2;
-transform-style: preserve-3d;
-position: absolute;
-transition: all 0.5s ease-out;
--webkit-transition: all 0.5s ease-out;
-backface-visibility: hidden;
-transform: rotateX(0deg);
-}*/
