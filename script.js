@@ -1,15 +1,43 @@
 $(document).ready(function(){
-    $('div').on("click",function(){
-      $(this).toggleClass('flip')
-      var firstCard = $(this).find("img.backCard");
-      console.log(firstCard);
-      var firstCardValue = $(this).val();
-      console.log(firstCardValue)
-    firstCard.attr("src", imageLibrary[firstCardValue])
-    });
+ var checkingArray = [];
+    var numFlipped = 0;
+    $('div div').on("click",function(){
+      if (!$(this).hasClass('flip')){
+        $(this).addClass('flip')
+        pickedCard = $(this).find("img.frontCard");
+        CardValue = $(this).val();
+        console.log(CardValue);
+        pickedCard.attr("src", imageLibrary[CardValue])
+        checkingArray.push(CardValue)
+        console.log(checkingArray);
+        numFlipped++;
+        console.log(numFlipped)
+      }
+      else {
+        console.log("already picked!")
+      }
+      cardMatching();
+    })
 
 
-
+function cardMatching(){
+  if (numFlipped === 2 && checkingArray[0] === checkingArray[1]) {
+    console.log("match")
+  }
+  else{
+    console.log("not yet")
+  }
+}
+//   if (CardValue === $("div.flip-container.flip").val())
+//   console.log("match made")
+//   // pickedCard.hide();
+//   // pickedCard1.hide();
+// }
+// // else {
+// //   pickedCard.removeClass('flip');
+// //   pickedCard1.removeClass('flip');
+// // }
+// // };
     var cardDeck = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12];
 
     function shuffle(cardDeck){
@@ -18,7 +46,7 @@ $(document).ready(function(){
     }
     shuffle(cardDeck);
     for (i = 0; i < cardDeck.length; i++) {
-      $(".flip-container").eq(i).val(cardDeck[i]);
+      $('div div').eq(i).val(cardDeck[i]);
     }
     var imageLibrary = {
       1: "images/ermac.png",
@@ -38,6 +66,7 @@ $(document).ready(function(){
     $("#reset").on("click", function (){
       $('.flip-container').removeClass("flip");
     });
+
     $("#background").on("click", function(){
       $("body").css("background", "url(images/MK_background_coliseum.jpg)");
     });
