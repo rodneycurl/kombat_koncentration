@@ -111,4 +111,11 @@ function cardMatching(){
       $("body").toggleClass("newBackground");
     });
 //set an on click toggle function that allows different backgrounds to be used in the game
+    $("#deck").on('click', function(){
+      window.location = "indexSF.html";
+    });
+
+    $("div#toasty").on("click", function(){
+      $('img.toasty').attr("src", "images/toasty_guy.png");
+    });
 });

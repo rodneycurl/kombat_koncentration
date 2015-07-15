@@ -13,10 +13,18 @@ header{
   border: 2px solid white;
 }
 body{
-  background: url(images/MK_background_reptile.jpg);
+  background: url(images/MK_background_reptile.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 body.newBackground{
-  background: url(images/MK_background_coliseum.jpg);
+  background: url(images/MK_background_coliseum.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .flip-container{
   height: 150px;
@@ -55,4 +63,9 @@ body.newBackground{
 }
 button:hover{
     background: #FF4136;
+}
+footer {
+  position: fixed;
+  bottom: -5px;
+  right: -5px;
 }
