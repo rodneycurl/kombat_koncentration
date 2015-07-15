@@ -46,9 +46,9 @@ function cardNotMatching(){
 //if no match I reset the counter
       $("div div").removeClass("flip");
 //I removed the added class
-      card1.children().eq(0).attr("src", "images/Mortal_Kombat_Logo.png");
+      card1.children().eq(0).attr("src", "imagesSF/Street_Fighter_Logo.jpg");
 //I change the image that is shown back to the orginial image in the HTML this occurs by targeting the child within the div I am selecting since that child has the image in it and the div is not the image
-      card2.children().eq(0).attr("src", "images/Mortal_Kombat_Logo.png");
+      card2.children().eq(0).attr("src", "imagesSF/Street_Fighter_Logo.jpg");
 //I change the image for the second card as well
       checkingArray = [];
 //The array is emptied in order to start the array over when new clicks occur
@@ -70,7 +70,7 @@ function cardMatching(){
   }
 }
 
-    var cardDeck = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12];
+    var cardDeck = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5];
 //set up a deck which assigns each image into two places
   function shuffle(cardDeck){
     for(var j, x, i = cardDeck.length; i; j = Math.floor(Math.random() * i), x = cardDeck[--i], cardDeck[i] = cardDeck[j], cardDeck[j] = x);
@@ -84,23 +84,16 @@ function cardMatching(){
 }
 //create a look that iterates the random values throughout the div front
     var imageLibrary = {
-      1: "images/ermac.png",
-      2: "images/jax.png",
-      3: "images/johnny_cage.png",
-      4: "images/kano.png",
-      5: "images/kenshi.png",
-      6: "images/liu_kang.png",
-      7: "images/quan_chi.png",
-      8: "images/radien.png",
-      9: "images/reptile.png",
-      10: "images/scorpion.png",
-      11: "images/sonya_blade.png",
-      12: "images/sub_zero.png"
+      1: "imagesSF/cammy.jpeg",
+      2: "imagesSF/chun_li.jpeg",
+      3: "imagesSF/dan.jpeg",
+      4: "imagesSF/ken.jpg",
+      5: "imagesSF/ryu.jpeg"
     }
 //images correspond to the random values assigned in the div front
     $("#reset").on("click", function (){
       $('div div').removeClass("flip");
-      $("img.frontCard").attr("src", "images/Mortal_Kombat_Logo.png");
+      $("img.frontCard").attr("src", "imagesSF/Street_Fighter_Logo.jpg");
       shuffle(cardDeck);
       for (i = 0; i < cardDeck.length; i++) {
         $('div div').eq(i).val(cardDeck[i]);
@@ -112,10 +105,6 @@ function cardMatching(){
     });
 //set an on click toggle function that allows different backgrounds to be used in the game
     $("#deck").on('click', function(){
-      window.location = "indexSF.html";
-    });
-
-    $("div#toasty").on("click", function(){
-      $('img.toasty').attr("src", "images/toasty_guy.png");
+     window.location = "index.html";
     });
 });

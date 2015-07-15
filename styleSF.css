@@ -10,35 +10,35 @@ header{
 .fight{
   height:150px;
   width: 400px;
-  border: 2px solid white;
 }
 body{
-  background: url(images/MK_background_reptile.jpg) no-repeat center center fixed;
+  background: url(imagesSF/SF_guile_background.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
 }
 body.newBackground{
-  background: url(images/MK_background_coliseum.jpg) no-repeat center center fixed;
+  background: url(imagesSF/SF_honda_background.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 .flip-container{
-  height: 150px;
-  width: 80px;
+  height: 250px;
+  width: 150px;
   margin: 25px;
   float:left;
   position:relative;
   background: #fff;
   border-radius: 10px;
-  border: 6px solid orange;
+  border: 6px solid black;
 }
 .frontCard{
-  height: 150px;
-  width: 80px;
+  height: 250px;
+  width: 150px;
   background: white;
 }
 .controls {
@@ -51,7 +51,7 @@ body.newBackground{
   justify-content: center;
 }
   button{
-  background: #01FF70;
+  background: #4169E1;
   color: #000;
   font-family: Impact, Charcoal, sans-serif;
   font-size: 40px;
@@ -63,9 +63,4 @@ body.newBackground{
 }
 button:hover{
     background: #FF4136;
-}
-footer {
-  position: fixed;
-  bottom: -5px;
-  right: -5px;
 }
