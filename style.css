@@ -10,6 +10,7 @@ header{
 .fight{
   height:150px;
   width: 400px;
+  border: 2px solid white;
 }
 body{
   background: url(images/MK_background_reptile.jpg);
@@ -20,7 +21,7 @@ body.newBackground{
 .flip-container{
   height: 150px;
   width: 80px;
-  margin: 15px;
+  margin: 25px;
   float:left;
   position:relative;
   background: #fff;
@@ -32,7 +33,6 @@ body.newBackground{
   width: 80px;
   background: white;
 }
-
 .controls {
   clear: left;
   display: -webkit-flex;
@@ -41,7 +41,7 @@ body.newBackground{
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
-  }
+}
   button{
   background: #01FF70;
   color: #000;
