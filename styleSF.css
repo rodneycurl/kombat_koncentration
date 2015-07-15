@@ -1,0 +1,66 @@
+
+header{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.fight{
+  height:150px;
+  width: 400px;
+}
+body{
+  background: url(imagesSF/SF_guile_background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+body.newBackground{
+  background: url(imagesSF/SF_honda_background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.flip-container{
+  height: 250px;
+  width: 150px;
+  margin: 25px;
+  float:left;
+  position:relative;
+  background: #fff;
+  border-radius: 10px;
+  border: 6px solid black;
+}
+.frontCard{
+  height: 250px;
+  width: 150px;
+  background: white;
+}
+.controls {
+  clear: left;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+  button{
+  background: #4169E1;
+  color: #000;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 40px;
+  text-align: center;
+  border: 2px solid white;
+  margin: 10px;
+  padding: 15px 25px;
+  border-radius: 10px;
+}
+button:hover{
+    background: #FF4136;
+}
